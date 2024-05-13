@@ -1,2 +1,2 @@
 docker stop my-running-app
-pause
+docker rm my-running-app
