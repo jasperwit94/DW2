@@ -1,2 +1,3 @@
-docker build -t my-apache2 .
-docker run -dit --name my-running-app -p 81:80 my-apache2
+docker build -t demo-site .
+
+docker run -d -p 81:80 --name demo-site-container demo-site

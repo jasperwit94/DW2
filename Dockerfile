@@ -1,4 +1,9 @@
-FROM httpd:latest
-COPY html /usr/local/apache2/htdocs/
-RUN date -u > /var/www/html/buildtime.txt
-EXPOSE 80/tcp
+FROM nginx:alpine
+
+COPY html /usr/share/nginx/html
+
+RUN date -u > /usr/share/nginx/html/buildtime.txt
+
+EXPOSE 81
+
+CMD ["nginx", "-g", "daemon off;"]

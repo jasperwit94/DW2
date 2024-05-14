@@ -1,2 +1,2 @@
-docker stop my-running-app
-docker rm my-running-app
+docker stop demo-site-container
+docker rm demo-site-container
